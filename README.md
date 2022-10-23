@@ -1,4 +1,4 @@
-# 2l
+# 2L
 Use the terminal <b>2</b>x the speed of <b>l</b>ight
 
 ## About
