@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string>
+#include <string.h>
 #include <commands.h>
 
 int main(int argc, char** argv) {
