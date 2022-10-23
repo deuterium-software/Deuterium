@@ -13,6 +13,7 @@ Feel free to tackle any issues, and send a PR!
 ## Credits
 
 [Areg](https://github.com/AregPrograms) - Lead Developer
+
 [Jased](https://github.com/jased-0001) - Developer
 
 and you, for supporting DeuTeurium! ❤
