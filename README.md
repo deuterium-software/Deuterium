@@ -5,7 +5,7 @@ Give your terminal wings with DeuTeurium
 DeuTerium was created to quickly use the terminal, and compact long commands.
 
 ## Download
-Check the latest release, and a .zip file should be present containing the neccessary files and folders for 2L
+Check the latest release, and a .zip file should be present containing the neccessary files and folders for DeuTeurium 
 
 ## Contribute
 Feel free to tackle any issues, and send a PR!
