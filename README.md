@@ -1,14 +1,18 @@
-# 2L
-Use the terminal <b>2</b>x the speed of <b>L</b>ight
+# Deuterium
+Give your terminal wings with DeuTeurium
 
 ## About
-2L was created to quickly use the terminal, and compact long commands.
+DeuTerium was created to quickly use the terminal, and compact long commands.
 
 ## Download
 Check the latest release, and a .zip file should be present containing the neccessary files and folders for 2L
 
 ## Contribute
-TBD
+Feel free to tackle any issues, and send a PR!
 
-### Credits to
-will be updated later
+## Credits
+
+[Areg](https://github.com/AregPrograms) - Lead Developer
+[Jased](https://github.com/jased-0001) - Developer
+
+and you, for supporting DeuTeurium! ❤

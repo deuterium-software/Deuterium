@@ -1,7 +1,13 @@
-# Commands
-Here are all the commands you can use with 2L
+# DeuTerium Help
+New to DeuTerium? Refer to this when you need help.
 
-## Filesystem
+## Prefix
+You can use the prefix <b>"dt"</b> with any of the commands stated below.
+
+## Commands
+Here are all the commands you can use with DeuTerium
+
+### Filesystem
 Interact with the file system.
 
 - nf <sup>{name}</sup> - "New File" Creates a new file named {name} in the current directory.
@@ -10,7 +16,7 @@ Interact with the file system.
 - dd <sup>{name}</sup> - "Delete Directory" Deletes directory named {name} in the current directory.
 - nds <sup>{name}</sup> - "New Directory & Switch" Creates a new directory named {name} and goes into it.
 
-## Templates
+### Templates
 Save and load templates, for example, git repository basic files
 
 - st <sup>{name}</sup> - "Save Template" saves the current directory as a template named {name}
