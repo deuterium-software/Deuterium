@@ -1,5 +1,5 @@
 # 2L
-Use the terminal <h2><b>2</b></h2>x the speed of <h2 style="display:inline"><b>l</b></h2>ight
+Use the terminal <u><b>2</b></u>x the speed of <u><b>l</b></u>ight
 
 ## About
 2L was created to quickly use the terminal, and compact long commands.
