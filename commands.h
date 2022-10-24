@@ -15,3 +15,7 @@
 
 #define SAVE_TEMPLATE "st"
 #define LOAD_TEMPLATE "lt"
+
+// other
+
+#define HELP "?"
