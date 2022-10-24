@@ -1,5 +1,7 @@
-# Deuterium
+V# Deuterium
 Give your terminal wings with DeuTeurium
+
+![Deuterium](https://img.shields.io/discord/1033847467655053332?style=for-the-badge&logo=discord&label=DISCORD&color=blue)
 
 ## About
 DeuTerium was created to quickly use the terminal, and compact long commands.
