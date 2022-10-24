@@ -1,7 +1,7 @@
 V# Deuterium
 Give your terminal wings with DeuTeurium
 
-![Deuterium](https://img.shields.io/discord/1033847467655053332?style=for-the-badge&logo=discord&label=DISCORD&color=blue)
+<a href="https://discord.gg/UEB6SWzfV7">![Deuterium](https://img.shields.io/discord/1033847467655053332?style=for-the-badge&logo=discord&label=DISCORD&color=blue)</a>
 
 ## About
 DeuTerium was created to quickly use the terminal, and compact long commands.
