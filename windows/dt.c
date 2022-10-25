@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-#include "commands.h"
+#include "../commands.h"
 #include <windows.h>
+
+void error(char* text) {
+    printf("\033[0;31merror: ");
+    printf("\033[0m%s", text);
+}
 
 int main(int argc, char** argv) {
     // check argv
