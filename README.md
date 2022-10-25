@@ -29,6 +29,7 @@ Once Deuterium is installed follow these steps:
     There should be a clone of the `dt` file in `{project folder}/dist/dt`, alongside a clone of `d`, if you wanted the shorter prefix.
 
     If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
+
 </details>
 
 Once you have downloaded the correct 
