@@ -21,7 +21,7 @@ Windows
   
 Once in __Administrator Mode__ (necessary to add program to C:\Program Files), run __make-windows.bat__.
   
-When the program finishes executing, add C:\Program Files\deuterium to PATH.
+When the program finishes executing, add `C:\Program Files\deuterium` to PATH, if not done automatically.
   
 And thats it! That simple! 🎉
   
@@ -40,6 +40,8 @@ Run `make`, or `make with-d-file` to install with a shorter prefix (d) along wit
 There should be a file named `dt` in `{project folder}/dist/`, alongside a file named `d`, if you wanted the shorter prefix.
 
 If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
+  
+After doing all these steps, Deuterium should be ready on your computer!
 
 </details>
 
