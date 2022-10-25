@@ -12,13 +12,19 @@ Check the latest release, and some installer executable files, Once (or if) you 
 Once Deuterium is installed follow these steps:
 
 <details>
-  <summary>Windows</summary>
+
+<summary>
   
-    Once in __Administrator Mode__ (necessary to add program to C:\Program Files), run __make-windows.bat__.
+Windows
   
-    When the program finishes executing, add C:\Program Files\deuterium to PATH.
+</summary>
   
-    And thats it! That simple! 🎉
+Once in __Administrator Mode__ (necessary to add program to C:\Program Files), run __make-windows.bat__.
+  
+When the program finishes executing, add C:\Program Files\deuterium to PATH.
+  
+And thats it! That simple! 🎉
+  
 </details>
 
 <details>
