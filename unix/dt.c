@@ -1,3 +1,11 @@
+/*
+* DEUTERIUM UNIX 2022
+*
+* AUTHORS:
+* AREG HARUTYUNYAN
+* JASE WILLIAMS
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>

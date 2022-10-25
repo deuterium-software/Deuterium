@@ -1,3 +1,5 @@
 # Text Editors
+
 *.swp # vi
+
 .vscode # Visual Studio Code settings

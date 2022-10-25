@@ -18,4 +18,6 @@ Feel free to tackle any issues, and send a PR!
 
 [Jased](https://github.com/jased-0001) - Developer
 
+<sup>Github Copilot (Jased KEEPS USING IT)</sup>
+
 and you, for supporting DeuTeurium! ❤
