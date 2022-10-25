@@ -13,20 +13,22 @@ Once Deuterium is installed follow these steps:
 
 <details>
   <summary>Windows</summary>
-  Once in __Administrator Mode__ (necessary to add program to C:\Program Files), run __make-windows.bat__.
   
-  When the program finishes executing, add C:\Program Files\deuterium to PATH.
+    Once in __Administrator Mode__ (necessary to add program to C:\Program Files), run __make-windows.bat__.
   
-  And thats it! That simple! 🎉
+    When the program finishes executing, add C:\Program Files\deuterium to PATH.
+  
+    And thats it! That simple! 🎉
 </details>
 
 <details>
   <summary>Unix</summary>
-  Run `make`, or `make with-d-file`, to install with a shorter prefix, along with the default, dt prefix.
+  
+    Run `make`, or `make with-d-file`, to install with a shorter prefix, along with the default, dt prefix.
 
-  There should be a clone of the `dt` file in `{project folder}/dist/dt`, alongside a clone of `d`, if you wanted the shorter prefix.
+    There should be a clone of the `dt` file in `{project folder}/dist/dt`, alongside a clone of `d`, if you wanted the shorter prefix.
 
-  If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
+    If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
 </details>
 
 Once you have downloaded the correct 
