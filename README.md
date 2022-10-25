@@ -46,7 +46,7 @@ If for any reason, there isnt a clone of these files in `/usr/bin`, then make su
 ## Contribute
 Feel free to tackle any issues, and send a PR!
 
-When you contribute, you can submit a form to get <b>Contributor</b> role in the [discord-server](https://discord.gg/UEB6SWzfV7).
+When you contribute, you can submit a form to get <b>Contributor</b> role in the [discord server](https://discord.gg/UEB6SWzfV7).
 
 ## Credits
 
