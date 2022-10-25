@@ -28,13 +28,18 @@ And thats it! That simple! 🎉
 </details>
 
 <details>
-  <summary>Unix</summary>
+
+<summary>
   
-    Run `make`, or `make with-d-file`, to install with a shorter prefix, along with the default, dt prefix.
+Unix
+  
+</summary>
+  
+Run `make`, or `make with-d-file`, to install with a shorter prefix, along with the default, dt prefix.
 
-    There should be a clone of the `dt` file in `{project folder}/dist/dt`, alongside a clone of `d`, if you wanted the shorter prefix.
+There should be a clone of the `dt` file in `{project folder}/dist/dt`, alongside a clone of `d`, if you wanted the shorter prefix.
 
-    If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
+If for any reason, there isnt a clone of these files in `/usr/bin`, then make sure to add them
 
 </details>
 
