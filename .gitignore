@@ -3,3 +3,12 @@
 *.swp # vi
 
 .vscode # Visual Studio Code settings
+
+c_cpp_properties.json
+settings.json
+
+# Compiled Files
+
+d
+dt
+dt.exe
