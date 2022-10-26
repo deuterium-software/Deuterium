@@ -2,7 +2,7 @@
 
 *.swp # vi
 
-.vscode # Visual Studio Code settings
+.vscode/ # Visual Studio Code settings
 
 # Compiled Files
 
