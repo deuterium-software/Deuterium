@@ -15,6 +15,7 @@
 
 #define SAVE_TEMPLATE "st"
 #define LOAD_TEMPLATE "lt"
+#define DELETE_TEMPLATE "dt"
 
 // other
 
