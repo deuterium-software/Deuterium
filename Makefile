@@ -4,7 +4,7 @@ all: no-d-file
 
 no-d-file:
 	@echo Compiling...
-	@$(CC) unix/dt.c -o dist/dt
+	@$(CC) versions/unix/dt.c -o dist/dt
 	@printf "Finished compiling\n\n"
 
 	@echo Copying to //usr/bin...
@@ -15,8 +15,8 @@ with-d-file:
 	@printf "D FILE SPECIFIED \n"
 
 	@echo Compiling...
-	@$(CC) unix/dt.c -o dist/dt
-	@$(CC) unix/dt.c -o dist/d
+	@$(CC) versions/unix/dt.c -o dist/dt
+	@$(CC) versions/unix/dt.c -o dist/d
 	@printf "Finished compiling\n\n"
 
 	@echo Copying to //usr/bin...

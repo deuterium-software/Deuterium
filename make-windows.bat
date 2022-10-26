@@ -2,8 +2,8 @@
 
 set CC=gcc
 
-%CC% windows\dt.c -o "dist\dt.exe"
-%CC% windows\dt.c -o "obj\dt.o"
+%CC% versions\windows\dt.c -o "dist\dt.exe"
+%CC% versions\windows\dt.c -o "obj\dt.o"
 
 mkdir "C:\Program Files\deuterium\"
 mkdir "C:\Program Files\deuterium\templates"
