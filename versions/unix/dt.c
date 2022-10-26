@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
                 if (f != -1) {
                     printf("File successfully created.");
                 } else {
-                    printf("File could not be created.");
+                    printf("Unable to be create file");
                 }
             }
         } else if (strcmp(argv[1], DELETE_FILE) == 0) {
@@ -49,15 +49,54 @@ int main(int argc, char** argv) {
                 if (remove(argv[2]) == 0) {
                     printf("File successfully removed");
                 } else {
-                    error("Could not delete file.");
+                    error("Unable to delete file");
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY) == 0) {
-            printf("not implemented");
+              
+            int dir = mkdir(argv[2], 0777);
+            
+                // check if directory is created or not
+            if (!dir)
+                printf("Directory successfully created");
+            else {
+                error("Unable to create directory");
+                return 1;
+            }
         } else if (strcmp(argv[1], DELETE_DIRECTORY) == 0) {
-            printf("not implemented");
+            int dir = rmdir(argv[2]);
+            
+                // check if directory is created or not
+            if (!dir)
+                printf("Directory successfully deleted");
+            else {
+                error("Unable to delete directory");
+                return 1;
+            }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
-            printf("not implemented");
+            int dir = mkdir(argv[2], 0777);
+            
+            // check if directory is created or not
+            if (!dir) {
+                printf("Directory successfully created");
+
+                char DEFAULT_STRING[sizeof(argv[2])+5] = "cd ";
+
+                strcat(DEFAULT_STRING, argv[2]);
+
+                system(DEFAULT_STRING);
+                // int ch = chdir(strcat('/', argv[2]));
+
+                // if (ch == 0) {
+                //     printf("\nSuccessfully switched directory");
+                // } else {
+                //     error("\nUnable to switch into directory");
+                //     return 1;
+                // }
+            } else {
+                error("Unable to create directory");
+                return 1;
+            }
         } else if (strcmp(argv[1], SAVE_TEMPLATE) == 0) {
             printf("not implemented");
         } else if (strcmp(argv[1], LOAD_TEMPLATE) == 0) {
@@ -69,6 +108,7 @@ int main(int argc, char** argv) {
             printf("FATAL: %s is not a valid command", argv[1]);
             return 1;
         }
-    }
-    
+    };
+
+    return 0;
 }

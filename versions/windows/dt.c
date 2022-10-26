@@ -87,7 +87,19 @@ int main(int argc, char** argv) {
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
             error("not implemented");
         } else if (strcmp(argv[1], SAVE_TEMPLATE) == 0) {
-            error("not implemented");
+            // first, lets make the copy command
+
+            char CMD_STR[90+sizeof(argv[2])] = "xcopy * \"C:\\Program Files\\deuterium\\templates\\";
+
+            strcat(CMD_STR, "test\" /E /H /C /I");
+
+            printf("running %s", CMD_STR);
+
+            // so the final command will be:
+
+            // xcopy * C:\Program Files\deuterium\templates\(whatever argv[2] is)
+
+            system(CMD_STR);
         } else if (strcmp(argv[1], LOAD_TEMPLATE) == 0) {
             error("not implemented");
         } else if (strcmp(argv[1], HELP) == 0) {
