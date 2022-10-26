@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include "../commands.h"
-#include <windows.h>
-
 /*
 * DEUTERIUM WINDOWS 2022
 *
@@ -11,6 +6,11 @@
 * JASE WILLIAMS
 * Github Copilot <3
 */
+
+#include <stdio.h>
+#include <string.h>
+#include "../commands.h"
+#include <windows.h>
 
 void error(char* text) {
     printf("\033[0;31merror: ");
