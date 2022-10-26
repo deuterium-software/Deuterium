@@ -101,7 +101,16 @@ int main(int argc, char** argv) {
 
             system(CMD_STR);
         } else if (strcmp(argv[1], LOAD_TEMPLATE) == 0) {
-            error("not implemented");
+            char CMD_STR[(sizeof(argv[2])*2)+80] = "xcopy \"C:\\Program Files\\deuterium\\templates\\";
+
+            strcat(CMD_STR, argv[2]);
+            strcat(CMD_STR, "\" .\\");
+            strcat(CMD_STR, argv[2]);
+            strcat(CMD_STR, "/I /E");
+
+            printf(CMD_STR);
+
+            system(CMD_STR);
         } else if (strcmp(argv[1], HELP) == 0) {
             error("not implemented");
         } else {
