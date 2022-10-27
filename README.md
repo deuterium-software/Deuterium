@@ -7,6 +7,21 @@ Give your terminal wings with DeuTeurium
 ## About
 DeuTerium was created to quickly use the terminal, and compact long commands.
 
+## How to use
+
+Deuterium is meant to shorten everyday commands.
+
+Lets start off with making a file. You can use the `dt` or `d` prefix:
+
+`dt nf my_file.txt`
+`d nf my_file.txt`
+
+The format is:
+
+`d/dt {command} {arguments...}`
+
+See <a href="https://github.com/AregPrograms/Deuterium/blob/main/help.md">help.md</a> for all commands.
+
 ## Download
 Check the latest release, and some installer executable files should be present. Once (or if) you find the executable right for you, install it and begin installing Deuterium.
 
