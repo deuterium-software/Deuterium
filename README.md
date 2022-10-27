@@ -7,7 +7,7 @@ Give your terminal wings with DeuTeurium
 ## About
 DeuTerium was created to quickly use the terminal, and compact long commands.
 
-## How to use
+## How to Use
 
 Deuterium is meant to shorten everyday commands.
 
