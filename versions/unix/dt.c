@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
                 if (f != -1) {
                     printf("File successfully created.");
                 } else {
-                    printf("Unable to be create file");
+                    error("Unable to be create file");
                 }
             }
         } else if (strcmp(argv[1], DELETE_FILE) == 0) {
