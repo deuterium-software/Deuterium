@@ -14,7 +14,6 @@ Interact with the file system.
 - df <sup>{name}</sup> - "Delete File" Deletes a file named {name} in the current directory.
 - nd <sup>{name}</sup> - "New Directory" Creates a new directory named {name} in the current directory.
 - dd <sup>{name}</sup> - "Delete Directory" Deletes directory named {name} in the current directory.
-- nds <sup>{name}</sup> - "New Directory & Switch" Creates a new directory named {name} and goes into it.
 
 ### Templates
 Save and load templates, for example, git repository basic files
