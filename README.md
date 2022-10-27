@@ -8,9 +8,9 @@ Give your terminal wings with DeuTeurium
 DeuTerium was created to quickly use the terminal, and compact long commands.
 
 ## Download
-Check the latest release, and some installer executable files, Once (or if) you find the executable right for you, install it and begin installing Deuterium.
+Check the latest release, and some installer executable files should be present. Once (or if) you find the executable right for you, install it and begin installing Deuterium.
 
-Once Deuterium is installed follow these steps:
+If something goes wrong, follow these steps:
 
 <details>
 
