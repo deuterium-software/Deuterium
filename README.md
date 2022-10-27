@@ -14,6 +14,7 @@ Deuterium is meant to shorten everyday commands.
 Lets start off with making a file. You can use the `dt` or `d` prefix:
 
 `dt nf my_file.txt`
+<br>
 `d nf my_file.txt`
 
 The format is:
