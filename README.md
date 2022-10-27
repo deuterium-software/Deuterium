@@ -24,7 +24,7 @@ The format is:
 See <a href="https://github.com/AregPrograms/Deuterium/blob/main/help.md">help.md</a> for all commands.
 
 ## Download
-Check the latest release, and some installer executable files should be present. Once (or if) you find the executable right for you, install it and begin installing Deuterium.
+Check the <a href="https://github.com/AregPrograms/Deuterium/releases/tag/BETA">latest release</a>, and some installer executable files should be present. Once (or if) you find the executable right for you, install it and begin installing Deuterium.
 
 If something goes wrong, follow these steps:
 
