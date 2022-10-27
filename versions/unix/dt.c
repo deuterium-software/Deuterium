@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
                     printf("File successfully created.");
                 } else {
                     error("Unable to be create file");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], DELETE_FILE) == 0) {
@@ -50,6 +51,7 @@ int main(int argc, char** argv) {
                     printf("File successfully removed");
                 } else {
                     error("Unable to delete file");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY) == 0) {
