@@ -73,6 +73,6 @@ When you contribute, you can submit a form to get <b>Contributor</b> role in the
 
 [Jased](https://github.com/jased-0001) - Developer
 
-<sup>Github Copilot (Jased KEEPS USING IT)</sup>
+<sup>Github Copilot (Jased KEEPS USING IT) (i'm sorry areg)</sup>
 
 and you, for supporting DeuTeurium! ❤

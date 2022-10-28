@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include "../commands.h"
+#include <windows.h>
+
 /*
 * DEUTERIUM WINDOWS 2022
 *
@@ -6,11 +11,6 @@
 * JASE WILLIAMS
 * Github Copilot <3
 */
-
-#include <stdio.h>
-#include <string.h>
-#include "../commands.h"
-#include <windows.h>
 
 void error(char* text) {
     printf("\033[0;31merror: ");
@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
                     printf("File successfully created.");
                 } else {
                     error("File could not be created.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], DELETE_FILE) == 0) {
@@ -52,6 +53,7 @@ int main(int argc, char** argv) {
                     printf("File successfully removed");
                 } else {
                     error("Could not delete file.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY) == 0) {
@@ -67,6 +69,7 @@ int main(int argc, char** argv) {
                     printf("Directory successfully created.");
                 } else {
                     error("Could not create directory.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], DELETE_DIRECTORY) == 0) {
@@ -82,6 +85,7 @@ int main(int argc, char** argv) {
                     printf("Directory successfully removed.");
                 } else {
                     error("Could not remove directory.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
@@ -111,10 +115,35 @@ int main(int argc, char** argv) {
             printf(CMD_STR);
 
             system(CMD_STR);
-        } else if (strcmp(argv[1], HELP) == 0) {
+        } else if (strcmp(argv[1], DELETE_TEMPLATE) == 0) {
             error("not implemented");
+
+            return 1;
+        } else if (strcmp(argv[1], HELP) == 0) {
+            //get all commands from commands.h and print them
+            
+            // if argv[2] is not null, then print the description of that command
+            if(argv[2] != NULL) {
+                error("not implemented");
+
+                return 1;
+            } else {    
+                for (int i = 0; i < sizeof(commands); i++) {
+                    // if this is even, then it's a command
+                    // else this is what its function is
+
+                    if (commands[i] != NULL) { // it for some reason had null in the end of the array 💀
+                        if (i % 2 == 0) {
+                            printf("%s", commands[i]);
+                        } else {
+                            printf(" - %s", commands[i]);
+                            printf("\n\r");
+                        }
+                    }
+                }
+            }
         } else {
-            error("command not found.");
+            error("command not found");
             return 1;
         }
     }
