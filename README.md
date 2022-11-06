@@ -1,15 +1,33 @@
 # Deuterium
 Give your terminal wings with DeuTeurium
 
-<a href="https://discord.gg/UEB6SWzfV7">![Deuterium](https://img.shields.io/discord/1033847467655053332?style=for-the-badge&logo=discord&label=DISCORD&color=blue)</a>
+<a href="https://discord.gg/UEB6SWzfV7">![Deuterium Discord](https://img.shields.io/discord/1033847467655053332?style=for-the-badge&logo=discord&label=DISCORD&color=blue)</a> <a href="https://github.com/AregPrograms/Deuterium/releases/tag/BETA">![Deuterium Latest Release](https://img.shields.io/github/v/release/AregPrograms/deuterium?include_prereleases&style=for-the-badge&logo=github)</a>
+
+<a href="https://getdeuterium.win">![Deuterium Website](https://img.shields.io/static/v1?label=WEBSITE&message=getdeuterium.win&color=%3CCOLOR%3E&style=for-the-badge&logo=html5)</a>
 
 ## About
 DeuTerium was created to quickly use the terminal, and compact long commands.
 
-## Download
-Check the latest release, and some installer executable files, Once (or if) you find the executable right for you, install it and begin installing Deuterium.
+## How to Use
 
-Once Deuterium is installed follow these steps:
+Deuterium is meant to shorten everyday commands.
+
+Lets start off with making a file. You can use the `dt` or `d` prefix:
+
+`dt nf my_file.txt`
+<br>
+`d nf my_file.txt`
+
+The format is:
+
+`d/dt {command} {arguments...}`
+
+See <a href="https://github.com/AregPrograms/Deuterium/blob/main/help.md">help.md</a> for all commands.
+
+## Download
+Check the <a href="https://github.com/AregPrograms/Deuterium/releases/tag/BETA">latest release</a>. Read the <b>Download</b> section for information on how to install.
+
+If something goes wrong, follow these steps:
 
 <details>
 
@@ -56,6 +74,6 @@ When you contribute, you can submit a form to get <b>Contributor</b> role in the
 
 [Jased](https://github.com/jased-0001) - Developer
 
-<sup>Github Copilot (Jased KEEPS USING IT)</sup>
+<sup>Github Copilot (Jased KEEPS USING IT) (i'm sorry areg)</sup>
 
 and you, for supporting DeuTeurium! ❤

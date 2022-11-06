@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+#include "../commands.h"
+#include <windows.h>
+#include <ctype.h> 
+
 /*
 * DEUTERIUM WINDOWS 2022
 *
@@ -7,11 +13,6 @@
 * Github Copilot <3
 */
 
-#include <stdio.h>
-#include <string.h>
-#include "../commands.h"
-#include <windows.h>
-
 void error(char* text) {
     printf("\033[0;31merror: ");
     printf("\033[0m%s", text);
@@ -20,8 +21,15 @@ void error(char* text) {
 int main(int argc, char** argv) {
     // check argv
 
+    //set argv[1] to lowercase
+    for (int i = 0; i < strlen(argv[1]); i++) {
+        argv[1][i] = tolower(argv[1][i]);
+    }
+
     if (argc < 2) {
         printf("Usage: %s <command>", argv[0]);
+
+        return 1;
     } else {
         //check if argv[1] was defined in commands.h
         if (strcmp(argv[1], NEW_FILE) == 0) {
@@ -37,6 +45,7 @@ int main(int argc, char** argv) {
                     printf("File successfully created.");
                 } else {
                     error("File could not be created.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], DELETE_FILE) == 0) {
@@ -52,6 +61,7 @@ int main(int argc, char** argv) {
                     printf("File successfully removed");
                 } else {
                     error("Could not delete file.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY) == 0) {
@@ -67,6 +77,7 @@ int main(int argc, char** argv) {
                     printf("Directory successfully created.");
                 } else {
                     error("Could not create directory.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], DELETE_DIRECTORY) == 0) {
@@ -82,10 +93,11 @@ int main(int argc, char** argv) {
                     printf("Directory successfully removed.");
                 } else {
                     error("Could not remove directory.");
+                    return 1;
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
-            error("not implemented");
+            error("command not supported\n\rtry the other versions!");
         } else if (strcmp(argv[1], SAVE_TEMPLATE) == 0) {
             // first, lets make the copy command
 
@@ -111,10 +123,58 @@ int main(int argc, char** argv) {
             printf(CMD_STR);
 
             system(CMD_STR);
-        } else if (strcmp(argv[1], HELP) == 0) {
+        } else if (strcmp(argv[1], DELETE_TEMPLATE) == 0) {
+            // delete a template with argv[2] as name
+
+            // easter egg: if argv[] is "dt dt dt", print "It starts with three things\nand I don't know why."
+            //check for easteregg
+            if (strcmp(argv[1], "dt") == 0) {
+                if (strcmp(argv[2], "dt") == 0) {
+                    printf("It starts with three things\nand I don't know why.\n\r");
+                    printf("It doesn't even matter how hard you try.\nKeep that in mind, I designed this rhyme\n\r");
+                    printf("To explain in due time:\nWhy you need to delete a template called \"DT\"\n\r");
+                }
+            }
+
             error("not implemented");
+
+            return 1;
+        } else if (strcmp(argv[1], HELP) == 0) {
+            //get all commands from commands.h and print them
+            
+            // if argv[2] is not null, then print the description of that command
+            if(argv[2] != NULL) {
+                error("not implemented");
+
+                return 1;
+            } else {    
+                for (int i = 0; i < sizeof(commands); i++) {
+                    // if this is even, then it's a command
+                    // else this is what its function is
+
+                    if (commands[i] != NULL) { // it for some reason had null in the end of the array 💀
+                        if (i % 2 == 0) {
+                            printf("%s", commands[i]);
+                        } else {
+                            printf(" - %s", commands[i]);
+                            printf("\n\r");
+                        }
+                    }
+                }
+            }
+        } else if (strcmp(argv[1], SET_TIME_EASTER) == 0) {
+            printf("uhm, you're not supposed to do that\n\r");
+            printf("ok..\n\r");
+            printf("dt dt dt - Lyrics-egg\n\r");
+            printf("dt wastin - your talent, Randy!\n\r");
+            printf("dt give up - Never!\n\r");
+            printf("more soon ig\n\r");
+
+            return 1;
         } else {
-            error("command not found.");
+            if (strcmp(argv[1], "wastin") == 0) { printf("your talent, Randy!\n\r"); return 0; }
+            if (strcmp(argv[1], "give") == 0) { if(strcmp(argv[2], "up") == 0) { printf("Never!\n\r"); return 0; } return 0; }
+            error("command not found");
             return 1;
         }
     }
