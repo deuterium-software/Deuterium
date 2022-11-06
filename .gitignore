@@ -1,12 +1,25 @@
 # Text Editors
 
-*.swp # vi
+*.swp
 
 c_cpp_properties.json
 settings.json
 
-# Compiled Files
+# Compiled
 
 d
 dt
-dt.exe
+
+*.exe
+
+# Installer Files
+
+deuterium-installer-*
+
+*.zip
+
+*-compile/
+
+obj/
+
+x*

@@ -11,6 +11,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include "../commands.h"
+#include "./help.h"
 
 void error(char* text) {
     printf("\033[0;31merror: ");
@@ -94,7 +95,7 @@ int main(int argc, char** argv) {
                 // } else {
                 //     error("\nUnable to switch into directory");
                 //     return 1;
-                // }
+                //}
             } else {
                 error("Unable to create directory");
                 return 1;
@@ -105,7 +106,29 @@ int main(int argc, char** argv) {
             printf("not implemented");
         
         } else if (strcmp(argv[1], HELP) == 0) {
-            printf("not implemented");
+            if (argc <= 2) {
+                for (int i = 0; i < 13; i++) { //sizeof() was being annoying af so i just decided to hard code it in
+                    if (i != 12) printf("%s\n", help_all[i]);
+                    if (i == 12) printf("\e[0;36m%s\n\e[0m", help_all[i]);
+                }
+            } else if (argc == 3) { // help on specific commands
+                void print_help_command(char** str, int n) {
+                    printf(str);
+                    for (int i = 0; i < n; i++) {
+                        printf("%p\n", str);
+                        printf("%s\n", str[i]);
+                    }
+                }
+                                    
+                if (strcmp(argv[3], "nf") == 0) {
+                    print_help_command(HELP_NF, 7);
+                }
+            }
+        } else if (strcmp(argv[1], "easter") == 0) {
+            printf("Hmm, you seem to have found it.\n");
+            printf("Well, as as a reward for sifting through the awful Deuterium source code (or listening to someone else), here are all the easter eggs in Deuterium!\n");
+            printf("-------------------[ EASTER EGGS ]-------------------\n");
+            printf("easter - See al the available easter eggs\n");
         } else {
             printf("FATAL: %s is not a valid command", argv[1]);
             return 1;
