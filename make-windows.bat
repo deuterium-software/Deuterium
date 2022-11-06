@@ -9,5 +9,5 @@ mkdir dist
 
 mkdir "C:\Program Files\deuterium\"
 mkdir "C:\Program Files\deuterium\templates"
-echo nul>"C:\Program Files\deuterium\config"
+echo nul>"C:\Program Files\deuterium\config.TOML"
 copy "dist\dt.exe" "C:\Program Files\deuterium\dt.exe"

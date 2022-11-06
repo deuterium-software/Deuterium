@@ -2,6 +2,7 @@
 #include <string.h>
 #include "../commands.h"
 #include <windows.h>
+#include <ctype.h> 
 
 /*
 * DEUTERIUM WINDOWS 2022
@@ -20,8 +21,15 @@ void error(char* text) {
 int main(int argc, char** argv) {
     // check argv
 
+    //set argv[1] to lowercase
+    for (int i = 0; i < strlen(argv[1]); i++) {
+        argv[1][i] = tolower(argv[1][i]);
+    }
+
     if (argc < 2) {
         printf("Usage: %s <command>", argv[0]);
+
+        return 1;
     } else {
         //check if argv[1] was defined in commands.h
         if (strcmp(argv[1], NEW_FILE) == 0) {
@@ -89,7 +97,7 @@ int main(int argc, char** argv) {
                 }
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
-            error("not implemented");
+            error("command not supported\n\rtry the other versions!");
         } else if (strcmp(argv[1], SAVE_TEMPLATE) == 0) {
             // first, lets make the copy command
 
@@ -116,6 +124,18 @@ int main(int argc, char** argv) {
 
             system(CMD_STR);
         } else if (strcmp(argv[1], DELETE_TEMPLATE) == 0) {
+            // delete a template with argv[2] as name
+
+            // easter egg: if argv[] is "dt dt dt", print "It starts with three things\nand I don't know why."
+            //check for easteregg
+            if (strcmp(argv[1], "dt") == 0) {
+                if (strcmp(argv[2], "dt") == 0) {
+                    printf("It starts with three things\nand I don't know why.\n\r");
+                    printf("It doesn't even matter how hard you try.\nKeep that in mind, I designed this rhyme\n\r");
+                    printf("To explain in due time:\nWhy you need to delete a template called \"DT\"\n\r");
+                }
+            }
+
             error("not implemented");
 
             return 1;
@@ -142,7 +162,18 @@ int main(int argc, char** argv) {
                     }
                 }
             }
+        } else if (strcmp(argv[1], SET_TIME_EASTER) == 0) {
+            printf("uhm, you're not supposed to do that\n\r");
+            printf("ok..\n\r");
+            printf("dt dt dt - Lyrics-egg\n\r");
+            printf("dt wastin - your talent, Randy!\n\r");
+            printf("dt give up - Never!\n\r");
+            printf("more soon ig\n\r");
+
+            return 1;
         } else {
+            if (strcmp(argv[1], "wastin") == 0) { printf("your talent, Randy!\n\r"); return 0; }
+            if (strcmp(argv[1], "give") == 0) { if(strcmp(argv[2], "up") == 0) { printf("Never!\n\r"); return 0; } return 0; }
             error("command not found");
             return 1;
         }
