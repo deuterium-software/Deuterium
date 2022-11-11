@@ -1,7 +1,12 @@
 /*
 * DEUTERIUM UNIX 2022
 *
-* AUTHORS:
+* Deuterium is a command line tool to help speed up your workflow.
+* Deuterium does this by making simple tasks like creating/deleting files or directories, into short 2 letter commands.
+* 
+*
+* dt.c (unix) AUTHORS:
+*
 * AREG HARUTYUNYAN
 * JASE WILLIAMS
 */
@@ -32,12 +37,14 @@ int main(int argc, char** argv) {
                 printf("Usage: %s %s <filename>\n", argv[0], argv[1]);
                 return 1;
             } else {
-                int f = open(argv[2], "w");
+                int f = open(argv[2], "w"); //open/create file in write mode
 
                 if (f != -1) {
                     printf("File successfully created.\n");
+                    close(f);
                 } else {
                     error("Unable to be create file.\n");
+                    close(f);
                     return 1;
                 }
             }
@@ -59,7 +66,7 @@ int main(int argc, char** argv) {
               
             int dir = mkdir(argv[2], 0777);
             
-                // check if directory is created or not
+            // check if directory is successfully created or not
             if (!dir)
                 printf("Directory successfully created.\n");
             else {
@@ -69,11 +76,11 @@ int main(int argc, char** argv) {
         } else if (strcmp(argv[1], DELETE_DIRECTORY) == 0) {
             int dir = rmdir(argv[2]);
             
-                // check if directory is created or not
+            // check if directory was succesfully deleted or not
             if (!dir)
                 printf("Directory successfully deleted.\n");
             else {
-                error("Unable to delete directory.\n");
+                error("Unable to delete directory.\n OUT: %d", dir); //possibly print dir to see what went wrong.
                 return 1;
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
@@ -85,7 +92,7 @@ int main(int argc, char** argv) {
         
         } else if (strcmp(argv[1], HELP) == 0) {
             if (argc <= 2) {
-                for (int i = 0; i < 13; i++) { //sizeof() was being annoying af so i just decided to hard code it in
+            for (int i = 0; i < 13; i++) { //sizeof() was being annoying so I just decided to hard code it in
                     if (i != 12) printf("%s\n", help_all[i]);
                     if (i == 12) printf("\e[0;36m%s\n\e[0m", help_all[i]);
                 }
