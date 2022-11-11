@@ -17,7 +17,7 @@ no-d-file:
 with-d-file:
 	@printf "D FILE SPECIFIED \n"
 
-	@rm dist -r
+	@rmdir dist -r
 	@mkdir dist
 
 	@echo Compiling...
