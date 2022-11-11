@@ -98,6 +98,8 @@ int main(int argc, char** argv) {
                                     
                 if (strcmp(argv[2], "nf") == 0) {
                     print_help_command(help_nf);
+                } else if (strcmp(argv[2], "df") == 0) {
+                    print_help_command(help_df);
                 }
             }
         } else if (strcmp(argv[1], "easter") == 0) {

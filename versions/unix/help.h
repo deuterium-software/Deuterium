@@ -24,4 +24,12 @@ char help_nf[100][100] = {
     "dt nf Makefile"
 };
 
-#define HELP_NF &help_nf
+char help_df[100][100] = {
+    "df <filename> <flags> - Delete a file",
+    "",
+    "Delete file named <filename>, if exists",
+    "",
+    "Examples:",
+    "dt df test.c",
+    "dt df Makefile"
+};
