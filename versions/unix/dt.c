@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
             if (!dir)
                 printf("Directory successfully deleted.\n");
             else {
-                error("Unable to delete directory.\n OUT: %d", dir); //possibly print dir to see what went wrong.
+                error("Unable to delete directory.\n");                
                 return 1;
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
