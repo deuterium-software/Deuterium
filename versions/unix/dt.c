@@ -22,22 +22,22 @@ int main(int argc, char** argv) {
     // check argv
 
     if (argc < 2) {
-        printf("Usage: %s <command>", argv[0]);
+        printf("Usage: %s <command>\n", argv[0]);
     } else {
         //check if argv[1] was defined in commands.h
         if (strcmp(argv[1], NEW_FILE) == 0) {
             //create new file using argv[2]
 
             if(argv[2] == NULL) {
-                printf("Usage: %s %s <filename>", argv[0], argv[1]);
+                printf("Usage: %s %s <filename>\n", argv[0], argv[1]);
                 return 1;
             } else {
                 int f = open(argv[2], O_RDWR | O_CREAT, S_IRUSR | S_IRGRP | S_IROTH);
 
                 if (f != -1) {
-                    printf("File successfully created.");
+                    printf("File successfully created.\n");
                 } else {
-                    error("Unable to be create file");
+                    error("Unable to be create file.\n");
                     return 1;
                 }
             }
@@ -45,13 +45,13 @@ int main(int argc, char** argv) {
             //delete file using argv[2]
 
             if(argv[2] == NULL) {
-                printf("Usage: %s %s <filename>", argv[0], argv[1]);
+                printf("Usage: %s %s <filename>.\n", argv[0], argv[1]);
                 return 1;
             } else {
                 if (remove(argv[2]) == 0) {
-                    printf("File successfully removed");
+                    printf("File successfully removed.\n");
                 } else {
-                    error("Unable to delete file");
+                    error("Unable to delete file.\n");
                     return 1;
                 }
             }
@@ -61,9 +61,9 @@ int main(int argc, char** argv) {
             
                 // check if directory is created or not
             if (!dir)
-                printf("Directory successfully created");
+                printf("Directory successfully created.\n");
             else {
-                error("Unable to create directory");
+                error("Unable to create directory.\n");
                 return 1;
             }
         } else if (strcmp(argv[1], DELETE_DIRECTORY) == 0) {
@@ -71,35 +71,13 @@ int main(int argc, char** argv) {
             
                 // check if directory is created or not
             if (!dir)
-                printf("Directory successfully deleted");
+                printf("Directory successfully deleted.\n");
             else {
-                error("Unable to delete directory");
+                error("Unable to delete directory.\n");
                 return 1;
             }
         } else if (strcmp(argv[1], NEW_DIRECTORY_SWITCH) == 0) {
-            int dir = mkdir(argv[2], 0777);
-            
-            // check if directory is created or not
-            if (!dir) {
-                printf("Directory successfully created");
-
-                char DEFAULT_STRING[sizeof(argv[2])+5] = "cd ";
-
-                strcat(DEFAULT_STRING, argv[2]);
-
-                system(DEFAULT_STRING);
-                // int ch = chdir(strcat('/', argv[2]));
-
-                // if (ch == 0) {
-                //     printf("\nSuccessfully switched directory");
-                // } else {
-                //     error("\nUnable to switch into directory");
-                //     return 1;
-                //}
-            } else {
-                error("Unable to create directory");
-                return 1;
-            }
+            printf("DEPRECATED");
         } else if (strcmp(argv[1], SAVE_TEMPLATE) == 0) {
             printf("not implemented");
         } else if (strcmp(argv[1], LOAD_TEMPLATE) == 0) {
@@ -114,13 +92,15 @@ int main(int argc, char** argv) {
             } else if (argc == 3) { // help on specific commands
                 void print_help_command(char** str, int n) {
                     printf(str);
+
+                    // lets not do this for now
                     for (int i = 0; i < n; i++) {
                         printf("%p\n", str);
                         printf("%s\n", str[i]);
                     }
                 }
                                     
-                if (strcmp(argv[3], "nf") == 0) {
+                if (strcmp(argv[2], "nf") == 0) {
                     print_help_command(HELP_NF, 7);
                 }
             }

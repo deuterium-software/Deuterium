@@ -7,6 +7,7 @@ no-d-file:
 	@$(CC) versions/unix/dt.c -o dist/dt
 	@printf "Finished compiling\n\n"
 
+	@rm dist -r
 	@mkdir dist
 
 	@echo Copying to //usr/bin...
@@ -16,6 +17,7 @@ no-d-file:
 with-d-file:
 	@printf "D FILE SPECIFIED \n"
 
+	@rm dist -r
 	@mkdir dist
 
 	@echo Compiling...
