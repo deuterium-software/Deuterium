@@ -15,7 +15,7 @@ char help_all[13][100] = {
 };
 
 char help_nf[100][100] = {
-    "nf <filename> - Create new file",
+    "nf <filename> <flags> - Create new file",
     "",
     "Create a new file named <filename>",
     "",

@@ -90,18 +90,14 @@ int main(int argc, char** argv) {
                     if (i == 12) printf("\e[0;36m%s\n\e[0m", help_all[i]);
                 }
             } else if (argc == 3) { // help on specific commands
-                void print_help_command(char** str, int n) {
-                    printf(str);
-
-                    // lets not do this for now
-                    for (int i = 0; i < n; i++) {
-                        printf("%p\n", str);
+                void print_help_command(char str[100][100]) {
+                    for (size_t i = 0; i < sizeof(str); i++) {
                         printf("%s\n", str[i]);
                     }
                 }
                                     
                 if (strcmp(argv[2], "nf") == 0) {
-                    print_help_command(HELP_NF, 7);
+                    print_help_command(help_nf);
                 }
             }
         } else if (strcmp(argv[1], "easter") == 0) {
