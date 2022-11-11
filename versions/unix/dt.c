@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
                 printf("Usage: %s %s <filename>\n", argv[0], argv[1]);
                 return 1;
             } else {
-                int f = open(argv[2], O_RDWR | O_CREAT, S_IRUSR | S_IRGRP | S_IROTH);
+                int f = open(argv[2], "w");
 
                 if (f != -1) {
                     printf("File successfully created.\n");
