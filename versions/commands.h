@@ -13,13 +13,14 @@
 
 // templates
 
+#define TEMPLATE_INIT "tinit"
 #define SAVE_TEMPLATE "st"
 #define LOAD_TEMPLATE "lt"
 #define DELETE_TEMPLATE "dt"
 
 // other
 
-#define HELP "?"
+#define HELP "help"
 
 #define SET_TIME_EASTER "set-time-easter"
 
@@ -43,6 +44,7 @@ char *commands[] = {
     DELETE_DIRECTORY, "Delete directory",
     NEW_DIRECTORY_SWITCH, "Make new directory and switch to it",
     "--[ Template", "Commands ]--",
+    TEMPLATE_INIT, "Initialize template in either ~/.deuterium/dt or \%USERPROFILE\%/.deuterium/dt",
     SAVE_TEMPLATE, "Save template from current directory",
     LOAD_TEMPLATE, "Loads template into current directory",
     DELETE_TEMPLATE, "Deletes template (not implemented)",

@@ -6,11 +6,12 @@ char help_all[13][100] = {
     "nd <directory name> - Create a new directory",
     "dd <directory name> - Delete directory",
     "\e[1;37m---[ Template Commands ]---\e[0m",
+    "dinit - Initialize template in either ~/.deuterium/dt",
     "st <template name> - Saves the current directory as a template named <template name>",
     "lt <template name> - Load template in current directory",
     "dt <template name> - Delete template",
     "\e[1;37m---[ ETC Commands ]---\e[0m",
-    "? - Help menu",
+    "help - Help menu (omg really??? no way!)",
     "Easter eggs? There are many easter eggs in Deuterium. Find them. \e[0;31mthis is not optional (/j)\e[0m"
 };
 

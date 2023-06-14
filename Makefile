@@ -35,3 +35,15 @@ uninstall:
 	@sudo rm /usr/bin/dt
 	@echo Removing d...
 	@sudo rm /usr/bin/d
+
+mac:
+	@echo Compiling...
+	@$(CC) versions/mac/dt.c -o dist/dt
+	@printf "Finished compiling\n\n"
+
+	@rm dist -r
+	@mkdir dist
+
+	@echo Copying to //usr/bin...
+	@sudo cp dist/dt //usr/bin/
+	@printf "Finished copying\n\n"
